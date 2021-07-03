@@ -1,0 +1,180 @@
+/* global */
+
+* {
+  font-family: "Roboto", sans-serif !important;
+}
+
+/* navbar */
+
+.logo {
+  height: 2.6rem;
+  width: 2.6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.divider {
+  height: 2.5rem;
+  width: 0.1rem;
+  background-color: #e0e1e6;
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.drop-btn {
+  font-weight: 300;
+  color: #797f8c;
+}
+
+.drop {
+  font-weight: 300;
+}
+
+.right-menu {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end !important;
+  text-align: center !important;
+}
+
+.top-nav li a {
+  font-weight: 300;
+  color: #797f8c;
+  text-align: center !important;
+}
+
+.btn:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-bg {
+  background-color: #3a71fe;
+  margin-left: 2rem;
+  font-weight: bold !important;
+  padding: 0.5rem 2rem !important;
+}
+
+@media (max-width: 991px) {
+  .btn-bg {
+    background: none !important;
+    margin-left: none !important;
+    padding: none !important;
+    color: black !important;
+    font-weight: lighter !important;
+  }
+
+  .navbar-nav {
+    background: white;
+    padding: 2rem;
+    box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 17%);
+    border: #434547;
+    z-index: 100;
+  }
+}
+
+/* header */
+
+.slide-container {
+  max-width: 80% !important;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center !important;
+  align-items: flex-start !important;
+}
+
+.carousel-indicators {
+  position: relative !important;
+  bottom: -1rem;
+}
+
+.carousel-inner {
+  border-radius: 0.5rem !important;
+  font-family: "Roboto", sans-serif !important;
+}
+
+.caption-btn {
+  background: #3a71fe;
+  border-radius: 0.5rem;
+}
+
+.caption-title {
+  color: black;
+  font-weight: bolder;
+}
+
+.caption-description {
+  color: rgb(49, 49, 49);
+  font-weight: normal;
+  width: 100% !important;
+  margin-bottom: 1.3rem;
+  margin-top: 0.4rem;
+}
+
+.caption-btn {
+  font-weight: normal;
+  color: white;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+button[data-bs-target="#carouselExampleIndicators"] {
+  height: 1rem !important;
+  width: 1rem !important;
+  border: 0.2rem solid #3a71fe !important;
+  margin-right: 1.1rem !important;
+  border-radius: 50% !important;
+
+  background: none !important;
+}
+
+@media (max-width: 509px) {
+  .caption-title {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  .caption-description {
+    display: none;
+  }
+
+  .caption-btn {
+    font-weight: normal;
+    color: white;
+    font-size: 1.1rem;
+    padding: 1rem;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px) {
+  .caption-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 989px) {
+  .caption-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* dynamic slider property */
+.carousel-indicators .active {
+  background-color: #3a71fe !important;
+  transition: background-color 0.3s ease-in-out !important;
+}
+
+/* stats */
+
+.our-stats {
+  margin-top: 5rem !important;
+}
