@@ -26,8 +26,19 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    <!-- top bar - toggle light or dark mode -->
+    <div class="top-bar sticky-top">
+      <div class="container d-flex justify-content-end align-items-center p-2">
+        <div class="toggle-theme-mode">
+          <input type="radio" class="toggler-light" name="mode" />
+          <span class="slider"></span>
+          <input type="radio" class="toggler-dark" name="mode" />
+        </div>
+        <label for="checkbox" class="toggler-txt">Switch to dark mode</label>
+      </div>
+    </div>
     <!-- navbar start -->
-    <nav class="navbar navbar-expand-lg navbar-light p-4">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light p-4">
       <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand" href="#"
           ><img src="/img/logo.jpg" alt="" class="logo" />
@@ -273,7 +284,7 @@
       </div>
     </section>
 
-    <section id="learn-more-section" class="mt-4">
+    <section id="learn-more-section" class="mt-4 page-section">
       <h2
         class="
           learn-title

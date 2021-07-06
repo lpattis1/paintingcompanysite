@@ -4,7 +4,88 @@
   font-family: "Roboto", sans-serif !important;
 }
 
+.dropdown-toggle:hover {
+  color: #3a71fe !important;
+}
+
+/* topbar */
+.top-bar {
+  background: #3a71fe;
+  z-index: 1000 !important;
+}
+
+.toggle-theme-mode {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 5rem;
+  height: 2rem;
+  background: #adc7d3;
+  margin-right: 1rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.toggler-txt {
+  color: black;
+}
+
+.toggle-theme-mode .toggler-light {
+  position: absolute;
+  left: 0.7rem;
+  cursor: pointer;
+  /* opacity: 0; */
+  z-index: 500;
+}
+
+.toggle-theme-mode .toggler-dark {
+  position: absolute;
+  right: 0.7rem;
+  cursor: pointer;
+  /* opacity: 0; */
+  z-index: 500;
+}
+
+.toggle-theme-mode .slider {
+  position: absolute;
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.4rem;
+  bottom: 0.3rem;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s ease-in-out;
+  border-radius: 50%;
+}
+
+.toggler-dark,
+.toggler-light {
+  opacity: 0;
+  height: 2rem;
+}
+
+.slide-dark {
+  transform: translateX(200%);
+  transition: 0.3s ease-in-out;
+}
+
+.slide-light {
+  transform: translateX(0%);
+  transition: 0.3s ease-in-out;
+}
+
 /* navbar */
+
+.navbar {
+  background: white !important;
+}
+
+/* dynamic box shadow for navbar */
+.navbar--fixed {
+  -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+}
 
 .logo {
   height: 2.6rem;
@@ -76,6 +157,15 @@ button:focus {
     box-shadow: 0px 1px 4px 0px rgb(0 0 0 / 17%);
     border: #434547;
     z-index: 100;
+  }
+
+  .top-bar .container {
+    justify-content: center !important;
+    align-items: center;
+  }
+
+  .toggler-txt {
+    font-size: 0.7rem;
   }
 }
 
@@ -240,4 +330,54 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .learn-card {
   margin-bottom: 3rem !important;
+}
+
+/* dark theme styles */
+
+/* body bg: #background: #1a1b1d; */
+
+.top-bar--dark {
+  background: none;
+  border-bottom: 0.1rem solid #a0a3a6;
+  transition: all 0.2s ease-in-out;
+}
+
+.toggle-theme-mode--dark {
+  background: #a0a3a6;
+}
+
+.toggler-txt--dark {
+  color: white;
+}
+
+.logo-txt--dark {
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.navbar--dark {
+  background: #1a1b1d !important;
+}
+
+.nav-link--dark {
+  color: #797f8c !important;
+}
+
+.btn-bg--dark {
+  background: none;
+  border: 0.2rem solid #a0a3a6;
+  border-radius: 2rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger-icon--dark {
+  background-image: url(/img/hamburger.png) !important;
+}
+
+.stat-title--dark {
+  color: white;
+}
+
+.stat-description--dark {
+  color: #dfdfdf;
 }
