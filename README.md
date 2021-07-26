@@ -1,2 +1,2 @@
-# travel agency site
-A project which redesigns a local travel agency's website.
+# painting company site
+A project which redesigns a local painting company's website.
