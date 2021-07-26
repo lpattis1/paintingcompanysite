@@ -1,101 +1,57 @@
-// Toggle light/dark mode
+// Collapse toggled nav links into the hamburger menu
 
-const toggleLightDarkMode = function () {
-  //   Toggle variables
-  const slider = document.querySelector(".slider");
-  const togglerLight = document.querySelector(".toggler-light");
-  const togglerDark = document.querySelector(".toggler-dark");
+const collapseMenuIntoHamburgerBar = function () {
+  //   Parent that the items will be appended to:
+  const hamburgerNav = document.querySelector(".top-nav");
+  const menuItemsClassList = ["nav-item", "added-nav-item"];
+  let smallerDevices = window.matchMedia("(max-width: 991px)");
 
-  togglerLight.addEventListener("click", function (e) {
-    slider.classList.remove("slide-dark");
-    if (togglerDark.checked) {
-      slider.classList.add("slide-light");
-    }
-  });
+  //   Item one:
+  const menuItemOne = document.createElement("li");
+  menuItemOne.className = "nav-item added-nav-item";
+  const menuLinkOne = document.createElement("a");
+  menuLinkOne.className = "nav-link";
+  menuLinkOne.textContent = "Job Photos";
+  menuLinkOne.setAttribute("href", "#jobgallery");
+  menuItemOne.appendChild(menuLinkOne);
+  menuItemOne.classList.add("lg-screen-hidden");
+  hamburgerNav.appendChild(menuItemOne);
 
-  togglerDark.addEventListener("click", function (e) {
-    slider.classList.remove("slide-light");
-    if (togglerDark.checked) {
-      slider.classList.add("slide-dark");
-    }
-  });
+  //   Item two:
+  const menuItemTwo = document.createElement("li");
+  menuItemTwo.className = "nav-item added-nav-item";
+  const menuLinkTwo = document.createElement("a");
+  menuLinkTwo.className = "nav-link";
+  menuLinkTwo.textContent = "About Us";
+  menuLinkTwo.setAttribute("href", "#about");
+  menuItemTwo.classList.add("lg-screen-hidden");
+  menuItemTwo.appendChild(menuLinkTwo);
+  hamburgerNav.appendChild(menuItemTwo);
+
+  //   Item three:
+  const menuItemThree = document.createElement("li");
+  menuItemThree.className = "nav-item added-nav-item";
+  const menuLinkThree = document.createElement("a");
+  menuLinkThree.className = "nav-link";
+  menuLinkThree.textContent = "Reviews";
+  menuLinkThree.setAttribute("href", "#reviews");
+  menuItemThree.classList.add("lg-screen-hidden");
+  menuItemThree.appendChild(menuLinkThree);
+  hamburgerNav.appendChild(menuItemThree);
+
+  //   Item four:
+  const menuItemFour = document.createElement("li");
+  menuItemFour.className = "nav-item added-nav-item";
+  const menuLinkFour = document.createElement("a");
+  menuLinkFour.className = "nav-link";
+  menuLinkFour.textContent = "Free Estimate";
+  menuLinkFour.setAttribute("href", "#reviews");
+  menuItemFour.classList.add("lg-screen-hidden");
+  menuItemFour.appendChild(menuLinkFour);
+  hamburgerNav.appendChild(menuItemFour);
 };
 
-// Dark mode styles function
-
-const displayToggleStyles = function () {
-  // Variables for the page elements to be affected:
-  const toggleTheme = document.querySelector(".toggle-theme-mode");
-  const topBar = document.querySelector(".top-bar");
-  const navBar = document.querySelector(".navbar");
-  const logoText = document.querySelector(".logo-txt");
-  const homeLink = document.querySelectorAll(".nav-link")[0];
-  const servicesLink = document.querySelectorAll(".nav-link")[1];
-  const navBtn = document.querySelector(".btn-bg");
-  const hamburgerMenuIcon = document.querySelector(".hamburger-icon");
-  const statTitles = document.querySelectorAll(".stat-title");
-  const statDescriptions = document.querySelectorAll(".stat-description");
-
-  //   Toggle variables
-  const slider = document.querySelector(".slider");
-  const togglerLight = document.querySelector(".toggler-light");
-  const togglerDark = document.querySelector(".toggler-dark");
-  const togglerTxt = document.querySelector(".toggler-txt");
-
-  togglerDark.addEventListener("click", function (e) {
-    if (togglerDark.checked) {
-      // single elements
-      document.body.style.background = "#1a1b1d";
-      toggleTheme.classList.add("toggle-theme-mode--dark");
-      togglerTxt.classList.add("toggler-txt--dark");
-      togglerTxt.textContent = "Switch to light mode";
-      topBar.classList.add("top-bar--dark");
-      navBar.classList.add("navbar--dark");
-      logoText.classList.add("logo-txt--dark");
-      homeLink.classList.add("nav-link--dark");
-      servicesLink.classList.add("nav-link--dark");
-      navBtn.classList.add("btn-bg--dark");
-      hamburgerMenuIcon.classList.add("hamburger-icon--dark");
-
-      //   multiple elements
-      statTitles.forEach((title) => {
-        title.classList.add("stat-title--dark");
-      });
-
-      statDescriptions.forEach((description) => {
-        description.classList.add("stat-description--dark");
-      });
-    }
-  });
-
-  togglerLight.addEventListener("click", function (e) {
-    if (togglerLight.checked) {
-      // single elements
-      document.body.style.background = "white";
-      toggleTheme.classList.remove("toggle-theme-mode--dark");
-      togglerTxt.classList.remove("toggler-txt--dark");
-      togglerTxt.textContent = "Switch to dark mode";
-      topBar.classList.remove("top-bar--dark");
-      navBar.classList.remove("navbar--dark");
-      logoText.classList.remove("logo-txt--dark");
-      homeLink.classList.remove("nav-link--dark");
-      servicesLink.classList.remove("nav-link--dark");
-      navBtn.classList.remove("btn-bg--dark");
-      hamburgerMenuIcon.classList.remove("hamburger-icon--dark");
-
-      //   multiple elements
-      statTitles.forEach((title) => {
-        title.classList.remove("stat-title--dark");
-      });
-
-      statDescriptions.forEach((description) => {
-        description.classList.remove("stat-description--dark");
-      });
-    }
-  });
-};
-toggleLightDarkMode();
-displayToggleStyles();
+collapseMenuIntoHamburgerBar();
 
 // Page sections
 const pageSections = document.querySelectorAll(".page-section");

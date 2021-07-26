@@ -3,6 +3,9 @@
 * {
   font-family: "Roboto", sans-serif !important;
 }
+body {
+  line-height: 1.7 !important;
+}
 
 .dropdown-toggle:hover {
   color: #3a71fe !important;
@@ -12,6 +15,7 @@
 .top-bar {
   background: #3a71fe;
   z-index: 1000 !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .toggle-theme-mode {
@@ -21,14 +25,15 @@
   justify-content: space-between;
   width: 5rem;
   height: 2rem;
-  background: #adc7d3;
+  background: #afb2b6;
   margin-right: 1rem;
   border-radius: 5rem;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .toggler-txt {
-  color: black;
+  color: white;
 }
 
 .toggle-theme-mode .toggler-light {
@@ -81,6 +86,22 @@
   background: white !important;
 }
 
+@media (max-width: 363px) {
+  .full-logo-txt {
+    display: none !important;
+  }
+}
+
+@media (max-width: 575px) {
+  .added-nav-item {
+    display: block !important;
+  }
+}
+
+.lg-screen-hidden {
+  display: none;
+}
+
 /* dynamic box shadow for navbar */
 .navbar--fixed {
   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
@@ -93,6 +114,7 @@
   border-radius: 50%;
   object-fit: cover;
   margin-right: 1rem;
+  transition: all 0.2s ease-in-out;
 }
 
 .divider {
@@ -140,6 +162,7 @@ button:focus {
   margin-left: 2rem;
   font-weight: bold !important;
   padding: 0.5rem 2rem !important;
+  transition: all 0.2s ease-in-out;
 }
 
 @media (max-width: 991px) {
@@ -197,13 +220,14 @@ button:focus {
 }
 
 .caption-title {
-  color: black;
+  color: white;
   font-weight: bolder;
+  text-transform: uppercase;
 }
 
 .caption-description {
-  color: rgb(49, 49, 49);
-  font-weight: normal;
+  color: rgb(250, 250, 250);
+  font-weight: lighter;
   width: 100% !important;
   margin-bottom: 1.3rem;
   margin-top: 0.4rem;
@@ -343,20 +367,28 @@ button[data-bs-target="#carouselExampleIndicators"] {
 }
 
 .toggle-theme-mode--dark {
-  background: #a0a3a6;
+  background: #afb2b6;
+  transition: all 0.2s ease-in-out;
 }
 
 .toggler-txt--dark {
   color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.slider--dark {
+  background: black !important;
 }
 
 .logo-txt--dark {
   color: white;
   transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .navbar--dark {
   background: #1a1b1d !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .nav-link--dark {
@@ -368,16 +400,20 @@ button[data-bs-target="#carouselExampleIndicators"] {
   border: 0.2rem solid #a0a3a6;
   border-radius: 2rem;
   transition: all 0.2s ease-in-out;
+  transition-delay: 0.2s;
 }
 
 .hamburger-icon--dark {
   background-image: url(/img/hamburger.png) !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .stat-title--dark {
   color: white;
+  transition: all 0.2s ease-in-out;
 }
 
 .stat-description--dark {
   color: #dfdfdf;
+  transition: all 0.2s ease-in-out;
 }
