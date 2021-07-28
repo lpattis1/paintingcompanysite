@@ -126,12 +126,12 @@ body {
 }
 
 .drop-btn {
-  font-weight: 300;
+  font-weight: 400;
   color: #797f8c;
 }
 
 .drop {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .right-menu {
@@ -142,7 +142,7 @@ body {
 }
 
 .top-nav li a {
-  font-weight: 300;
+  font-weight: 400;
   color: #797f8c;
   text-align: center !important;
 }
@@ -193,6 +193,10 @@ button:focus {
 }
 
 /* header */
+
+#home {
+  margin-top: 5rem !important;
+}
 
 .slide-container {
   max-width: 80% !important;
@@ -273,6 +277,10 @@ button[data-bs-target="#carouselExampleIndicators"] {
   .caption-title {
     font-size: 1.8rem;
   }
+
+  .project-before-after {
+    width: 90vw;
+  }
 }
 
 @media (max-width: 989px) {
@@ -320,7 +328,8 @@ button[data-bs-target="#carouselExampleIndicators"] {
 }
 
 .stat-description {
-  font-weight: lighter;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
 }
 
 /* dynamic stat class */
@@ -343,17 +352,189 @@ button[data-bs-target="#carouselExampleIndicators"] {
   font-size: 2.8rem;
   font-weight: 500;
   color: white;
-  margin-bottom: 2rem !important;
+  margin-bottom: 1rem !important;
   text-align: center;
   line-height: 1.7;
 }
 
 .card {
   border: none !important;
+  height: 36rem;
+}
+
+.learn-heading {
+  font-weight: 700;
+  font-size: 2rem;
 }
 
 .learn-card {
   margin-bottom: 3rem !important;
+}
+
+.learn-description {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.learn-text {
+  width: 90%;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.55);
+  padding-bottom: 1.5rem;
+}
+
+.house-img {
+  object-fit: cover;
+  height: 50% !important;
+}
+
+.learn-btn-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem !important;
+}
+
+.work-btn {
+  margin: 0 auto !important;
+  background: #3a71fe;
+  padding: 1rem 2.5rem;
+  color: white;
+}
+
+/* before after slider */
+
+.project-text-title {
+  padding-top: 1.5rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+
+  margin-bottom: 1rem !important;
+  text-align: center;
+  line-height: 1.7;
+}
+
+.project-highlight {
+  color: #3a71fe;
+}
+
+.project-text-description {
+  color: rgba(0, 0, 0, 0.55);
+  width: 90%;
+  margin: auto;
+  margin-bottom: 2.5rem;
+}
+
+.project-container {
+  width: 100%;
+  min-height: 100vh;
+}
+.project-before-after {
+  margin: auto !important;
+  overflow: hidden !important;
+  border-radius: 0.5rem;
+  box-shadow: -7px 5px 16px 1px rgba(56, 86, 122, 0.3);
+  cursor: col-resize;
+  width: 80vw;
+  max-width: 76.8rem;
+  position: relative;
+}
+
+.project-before-after img {
+  width: 80vw;
+  max-width: 76.8rem;
+  height: auto;
+  max-height: 80vh;
+  object-fit: cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.project-before-after .project-img-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.25s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.project-before-after .project-img-wrapper img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
+.project-before-after .project-label {
+  position: absolute;
+  top: 1rem;
+  z-index: 3;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  text-align: center;
+  letter-spacing: 1px;
+  user-select: none;
+  opacity: 0;
+  transition: 0.25s cubic-bezier(0.68, 0.26, 0.58, 1.22);
+}
+
+.project-before-after .project-label--show {
+  opacity: 1 !important;
+}
+
+.project-before-after .label-before {
+  left: 1rem;
+  background: white;
+  color: #3a71fe;
+}
+
+.project-before-after .label-after {
+  right: 1rem;
+  background: #3a71fe;
+  color: white;
+}
+
+.project-before-after .handle {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 5rem / 2);
+  height: 100%;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  z-index: 2;
+  transition: 0.25s cubic-bezier(0.03, 0.98, 0.52, 0.99);
+}
+
+.project-before-after .handle-line {
+  width: 0.2rem;
+  flex-grow: 1;
+  background-color: #fff;
+}
+
+.project-before-after .handle-circle {
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  border: 0.2rem solid #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.bi-caret-left,
+.bi-caret-right {
+  font-size: 1.6rem;
 }
 
 /* dark theme styles */
@@ -416,4 +597,12 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .stat-description--dark {
   color: #dfdfdf;
   transition: all 0.2s ease-in-out;
+}
+
+.project-text-title--dark {
+  color: white;
+}
+
+.project-text-description--dark {
+  color: #dfdfdf;
 }

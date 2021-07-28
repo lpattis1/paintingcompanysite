@@ -1,6 +1,6 @@
 // Toggle light/dark mode
 
-const toggleLightDarkMode = function () {
+function toggleLightDarkMode() {
   //   Toggle variables
   const slider = document.querySelector(".slider");
   const togglerLight = document.querySelector(".toggler-light");
@@ -19,11 +19,11 @@ const toggleLightDarkMode = function () {
       slider.classList.add("slide-dark");
     }
   });
-};
+}
 
 // Dark mode styles function
 
-const displayToggleStyles = function () {
+function displayToggleStyles() {
   // Variables for the page elements to be affected:
   const toggleTheme = document.querySelector(".toggle-theme-mode");
   const topBar = document.querySelector(".top-bar");
@@ -35,6 +35,10 @@ const displayToggleStyles = function () {
   const hamburgerMenuIcon = document.querySelector(".hamburger-icon");
   const statTitles = document.querySelectorAll(".stat-title");
   const statDescriptions = document.querySelectorAll(".stat-description");
+  const recentProjectTitle = document.querySelector(".project-text-title");
+  const recentProjectDescription = document.querySelector(
+    ".project-text-description"
+  );
 
   //   Toggle variables
   const slider = document.querySelector(".slider");
@@ -57,6 +61,8 @@ const displayToggleStyles = function () {
       servicesLink.classList.add("nav-link--dark");
       navBtn.classList.add("btn-bg--dark");
       hamburgerMenuIcon.classList.add("hamburger-icon--dark");
+      recentProjectTitle.classList.add("project-text-title--dark");
+      recentProjectDescription.classList.add("project-text-description--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -84,6 +90,10 @@ const displayToggleStyles = function () {
       servicesLink.classList.remove("nav-link--dark");
       navBtn.classList.remove("btn-bg--dark");
       hamburgerMenuIcon.classList.remove("hamburger-icon--dark");
+      recentProjectTitle.classList.remove("project-text-title--dark");
+      recentProjectDescription.classList.remove(
+        "project-text-description--dark"
+      );
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -95,7 +105,6 @@ const displayToggleStyles = function () {
       });
     }
   });
-};
+}
 toggleLightDarkMode();
 displayToggleStyles();
-

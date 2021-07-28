@@ -1,10 +1,9 @@
 // Collapse toggled nav links into the hamburger menu
 
-const collapseMenuIntoHamburgerBar = function () {
+function collapseMenuIntoHamburgerBar() {
   //   Parent that the items will be appended to:
   const hamburgerNav = document.querySelector(".top-nav");
   const menuItemsClassList = ["nav-item", "added-nav-item"];
-  let smallerDevices = window.matchMedia("(max-width: 991px)");
 
   //   Item one:
   const menuItemOne = document.createElement("li");
@@ -49,7 +48,7 @@ const collapseMenuIntoHamburgerBar = function () {
   menuItemFour.classList.add("lg-screen-hidden");
   menuItemFour.appendChild(menuLinkFour);
   hamburgerNav.appendChild(menuItemFour);
-};
+}
 
 collapseMenuIntoHamburgerBar();
 
@@ -67,7 +66,7 @@ const statsIcon = document.querySelectorAll(".stat-icon");
 const statsText = document.querySelectorAll(".stat-text");
 
 // Stats scroll into view functions
-const displayStats = function () {
+function displayStats() {
   const observer = new IntersectionObserver(function (sections, options) {
     sections.forEach((section) => {
       if (!section.isIntersecting) {
@@ -103,6 +102,100 @@ const displayStats = function () {
   pageSections.forEach((section) => {
     observer.observe(section);
   });
-};
+}
 
 displayStats();
+
+// Before and after slider
+VanillaTilt.init(document.querySelector(".project-before-after"), {
+  max: 5,
+  speed: 800,
+  scale: 1.02,
+});
+
+const projectBeforeAfterSlider = document.querySelector(
+  ".project-before-after"
+);
+const projectImgWrapper = document.querySelector(".project-img-wrapper");
+const projectHandle = document.querySelector(".handle");
+const projectLabel = document.querySelectorAll(".project-label");
+const beforeSideLabel = document.querySelector(".label-before");
+const afterSideLabel = document.querySelector(".after-label");
+const beforeImg = document.querySelector(".before-img");
+const afterImg = document.querySelector(".after-img");
+
+function showOrProjectHideLabels() {
+  projectBeforeAfterSlider.addEventListener("mouseenter", function (e) {
+    projectLabel.forEach((label) => {
+      label.classList.add("project-label--show");
+    });
+  });
+
+  projectBeforeAfterSlider.addEventListener("mouseleave", function (e) {
+    projectLabel.forEach((label) => {
+      label.classList.remove("project-label--show");
+    });
+  });
+}
+
+projectBeforeAfterSlider.addEventListener("mousemove", projectSliderMove);
+projectBeforeAfterSlider.addEventListener("touchmove", projectSliderMove);
+
+function projectSliderMove(e) {
+  if (isProjectSliderLocked) {
+    return;
+  }
+  const projectSliderLeftX = projectBeforeAfterSlider.offsetLeft;
+  const projectSliderWidth = projectBeforeAfterSlider.clientWidth;
+  const projectHandleWidth = projectHandle.clientWidth;
+  let mouseX = (e.clientX || e.touches[0].clientX) - projectSliderLeftX;
+
+  if (mouseX < 0) {
+    mouseX = 0;
+  } else if (mouseX > projectSliderWidth) {
+    mouseX = projectSliderWidth;
+  }
+
+  projectImgWrapper.style.width = `${(
+    (1 - mouseX / projectSliderWidth) *
+    100
+  ).toFixed(4)}%`;
+
+  projectHandle.style.left = `calc(${(mouseX / projectSliderWidth) * 100}% - ${
+    projectHandleWidth / 2
+  }px)`;
+}
+
+let isProjectSliderLocked = false;
+
+projectBeforeAfterSlider.addEventListener("mouseup", projectSliderMouseUp);
+projectBeforeAfterSlider.addEventListener("touchend", projectSliderMouseUp);
+
+projectBeforeAfterSlider.addEventListener(
+  "mouseleave",
+  projectSliderMouseLeave
+);
+
+projectBeforeAfterSlider.addEventListener("mousedown", projectSliderMouseDown);
+projectBeforeAfterSlider.addEventListener("touchstart", projectSliderMouseDown);
+
+function projectSliderMouseUp(e) {
+  if (!isProjectSliderLocked) {
+    isProjectSliderLocked = true;
+  }
+}
+
+function projectSliderMouseLeave(e) {
+  if (isProjectSliderLocked) {
+    isProjectSliderLocked = false;
+  }
+}
+
+function projectSliderMouseDown(e) {
+  if (isProjectSliderLocked) {
+    isProjectSliderLocked = false;
+    projectSliderMove(e);
+  }
+}
+
+showOrProjectHideLabels();
