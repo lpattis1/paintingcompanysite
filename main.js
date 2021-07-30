@@ -199,3 +199,35 @@ function projectSliderMouseDown(e) {
 }
 
 showOrProjectHideLabels();
+
+// Testimonials slider
+function cycleThroughTestimonials() {
+  const testimonialImgs = document.querySelectorAll(
+    ".testimonials-indicator-img"
+  );
+  const testimonials = document.querySelectorAll(".testimonial-slide");
+
+  testimonialImgs.forEach((img) => {
+    const testimonialIndicators = img.dataset.indicator;
+    console.log(testimonialIndicators);
+
+    img.addEventListener("click", function (e) {
+      for (let i = 0; i < testimonials.length; i++) {
+        testimonials[i].classList.remove("testimonial-slide-active");
+        if (testimonials[i] === testimonials[testimonialIndicators]) {
+          testimonials[i].classList.add("testimonial-slide-active");
+        }
+      }
+
+      for (let i = 0; i < testimonialImgs.length; i++) {
+        testimonialImgs[i].classList.remove("indicator-active");
+
+        if (testimonialImgs[i] === testimonialImgs[testimonialIndicators]) {
+          testimonialImgs[i].classList.add("indicator-active");
+        }
+      }
+    });
+  });
+}
+
+cycleThroughTestimonials();

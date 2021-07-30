@@ -272,6 +272,12 @@ button[data-bs-target="#carouselExampleIndicators"] {
   }
 }
 
+@media (max-width: 458px) {
+  .testimonials-indicator {
+    flex-direction: column;
+  }
+}
+
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (max-width: 768px) {
   .caption-title {
@@ -344,7 +350,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
 #learn-more-section {
   margin-top: 6rem !important;
   background: #3a71fe;
-  width: 100% !;
+  width: 100%;
 }
 
 .learn-title {
@@ -355,6 +361,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
   margin-bottom: 1rem !important;
   text-align: center;
   line-height: 1.7;
+  text-transform: uppercase;
 }
 
 .card {
@@ -410,7 +417,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
   padding-top: 1.5rem !important;
   font-size: 2.8rem;
   font-weight: 500;
-
+  text-transform: uppercase;
   margin-bottom: 1rem !important;
   text-align: center;
   line-height: 1.7;
@@ -535,6 +542,75 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .bi-caret-left,
 .bi-caret-right {
   font-size: 1.6rem;
+}
+
+/* testimonials */
+#testimonials {
+  margin-top: 6rem !important;
+  background: #3a71fe;
+  width: 100%;
+}
+.testimonials-title {
+  padding-top: 6rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem !important;
+  text-align: center;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.testimonial-slide {
+  display: none;
+}
+
+.testimonial-text {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.testimonial-name {
+  color: rgb(236, 236, 236);
+}
+
+.testimonial-slide-active {
+  display: block !important;
+  animation: slide 1s linear;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-2rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.testimonials-indicator {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  display: flex;
+  justify-content: center;
+}
+
+.indicator-active {
+  opacity: 1 !important;
+}
+
+.testimonials-indicator-img {
+  height: calc(7rem + 6vw);
+  width: calc(7rem + 6vw);
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 2vh 2vw;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 1s ease;
 }
 
 /* dark theme styles */
