@@ -39,6 +39,8 @@ function displayToggleStyles() {
   const recentProjectDescription = document.querySelector(
     ".project-text-description"
   );
+  const whyUsHeading = document.querySelector(".why-us-heading");
+  const whyUsText = document.querySelectorAll(".why-us-txt");
 
   //   Toggle variables
   const slider = document.querySelector(".slider");
@@ -63,6 +65,7 @@ function displayToggleStyles() {
       hamburgerMenuIcon.classList.add("hamburger-icon--dark");
       recentProjectTitle.classList.add("project-text-title--dark");
       recentProjectDescription.classList.add("project-text-description--dark");
+      whyUsHeading.classList.add("why-us-heading--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -71,6 +74,10 @@ function displayToggleStyles() {
 
       statDescriptions.forEach((description) => {
         description.classList.add("stat-description--dark");
+      });
+
+      whyUsText.forEach((text) => {
+        text.classList.add("why-us-txt--dark");
       });
     }
   });
@@ -94,6 +101,7 @@ function displayToggleStyles() {
       recentProjectDescription.classList.remove(
         "project-text-description--dark"
       );
+      whyUsHeading.classList.remove("why-us-heading--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -102,6 +110,10 @@ function displayToggleStyles() {
 
       statDescriptions.forEach((description) => {
         description.classList.remove("stat-description--dark");
+      });
+
+      whyUsText.forEach((text) => {
+        text.classList.remove("why-us-txt--dark");
       });
     }
   });
