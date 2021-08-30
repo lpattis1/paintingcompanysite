@@ -351,6 +351,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
   margin-top: 6rem !important;
   background: #3a71fe;
   width: 100%;
+  overflow: hidden;
 }
 
 .learn-title {
@@ -362,6 +363,8 @@ button[data-bs-target="#carouselExampleIndicators"] {
   text-align: center;
   line-height: 1.7;
   text-transform: uppercase;
+  position: relative;
+  right: -4000px;
 }
 
 .card {
@@ -376,12 +379,16 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .learn-card {
   margin-bottom: 6rem !important;
+  position: relative;
+  left: -4000px;
 }
 
 .learn-description {
   width: 90%;
   margin: auto;
   margin-bottom: 2rem;
+  position: relative;
+  right: -4000px;
   color: rgba(0, 0, 0, 0.55);
 }
 
@@ -436,7 +443,6 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .project-container {
   width: 100%;
-  min-height: 100vh;
 }
 .project-before-after {
   margin: auto !important;
@@ -559,6 +565,8 @@ button[data-bs-target="#carouselExampleIndicators"] {
   text-align: center;
   line-height: 1.7;
   text-transform: uppercase;
+  position: relative;
+  right: -4000px;
 }
 
 .testimonial-slide {
@@ -577,6 +585,8 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .testimonial-slide-active {
   display: block !important;
   animation: slide 1s linear;
+  position: relative;
+  right: -4000px;
 }
 
 @keyframes slide {
@@ -612,6 +622,8 @@ button[data-bs-target="#carouselExampleIndicators"] {
   cursor: pointer;
   transition: opacity 1s ease;
   margin-bottom: 4rem !important;
+  position: relative;
+  left: -4000px;
 }
 
 /* why us section */

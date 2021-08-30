@@ -59,6 +59,8 @@ const pageSections = document.querySelectorAll(".page-section");
 const homeSection = document.querySelector("#home");
 const learnMoreSection = document.querySelector("#learn-more-section");
 const nav = document.querySelector(".navbar");
+const currentProjects = document.querySelector("#current-projects");
+const testimonialSection = document.querySelector("#testimonials");
 
 // Stats variables
 const statsSection = document.querySelector("#stats-section");
@@ -71,6 +73,10 @@ function displayStats() {
     sections.forEach((section) => {
       if (!section.isIntersecting) {
         return;
+      }
+
+      if (section.target.id === homeSection.id) {
+        headerAnimations();
       }
 
       if (
@@ -95,6 +101,18 @@ function displayStats() {
             stats.classList.add("rise");
           }, 302);
         });
+      }
+
+      if (section.target.id === learnMoreSection.id) {
+        offerSectionAnimationsShow();
+      }
+
+      if (section.target.id === currentProjects.id) {
+        projectBeforeAfterAnimations();
+      }
+
+      if (section.target.id === testimonialSection.id) {
+        testimonialsAnimations();
       }
     });
   });
