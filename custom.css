@@ -276,6 +276,14 @@ button[data-bs-target="#carouselExampleIndicators"] {
   .testimonials-indicator {
     flex-direction: column;
   }
+
+  .sorting-row {
+    flex-direction: column !important;
+  }
+
+  .gallery-sort {
+    margin-bottom: 2rem;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
@@ -729,6 +737,116 @@ button[data-bs-target="#carouselExampleIndicators"] {
   font-weight: 500 !important;
   font-size: 0.9rem;
 }
+
+/* -------------------------------- */
+/* Image Gallery Page */
+
+#painting-gallery-header {
+  margin-top: 4rem !important;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 24, 0.3),
+      rgba(12, 9, 11, 0.514)
+    ),
+    url(/img/logo.jpeg);
+  background-size: cover;
+  height: 55vh;
+  width: 100%;
+}
+
+.gallery-header {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.gallery-description {
+  color: rgba(0, 0, 0, 0.55);
+  margin-bottom: 3rem;
+}
+
+.gallery-sort {
+  margin-left: 2rem;
+  background: white;
+  box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.16);
+  border-radius: 5rem;
+  height: 2.5rem;
+  width: 10rem;
+  display: flex;
+  align-items: center !important;
+  cursor: pointer;
+}
+
+.gallery-title {
+  margin-top: 5rem !important;
+}
+
+.gallery-text {
+  font-size: 1rem;
+  padding: 0.5rem 1.5rem;
+  margin: auto;
+}
+
+.all-img,
+.exterior-img,
+.interior-img {
+  object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+}
+
+/* Gallery */
+
+.display-gallery-img {
+  transition: all 0.3s ease-in-out;
+}
+
+.gallery-img {
+  cursor: pointer;
+}
+
+/* Modal */
+
+.full-img-modal {
+  background-color: rgba(23, 24, 23, 0.384);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.full-img {
+  position: absolute;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out;
+  object-fit: cover;
+}
+
+/* Dynamic gallery classes */
+.enlarge {
+  transform: translate(-50%, -50%) scale(0.6);
+}
+
+.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.hide-gallery-img {
+  display: none !important;
+}
+
+/* -------------------------------- */
 
 /* dark theme styles */
 

@@ -11,7 +11,7 @@ function collapseMenuIntoHamburgerBar() {
   const menuLinkOne = document.createElement("a");
   menuLinkOne.className = "nav-link";
   menuLinkOne.textContent = "Job Photos";
-  menuLinkOne.setAttribute("href", "#jobgallery");
+  menuLinkOne.setAttribute("href", "jobphotos.html");
   menuItemOne.appendChild(menuLinkOne);
   menuItemOne.classList.add("lg-screen-hidden");
   hamburgerNav.appendChild(menuItemOne);
