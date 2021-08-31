@@ -702,6 +702,34 @@ button[data-bs-target="#carouselExampleIndicators"] {
   border-radius: 0.5rem;
 }
 
+/* Footer section */
+
+.email-highlight {
+  color: #3a71fe;
+}
+
+.about-footer .about-us-heading {
+  font-size: 1.2rem !important;
+  text-transform: uppercase;
+  color: #3a71fe;
+  font-weight: 700;
+}
+
+.about-footer .about-footer-description {
+  font-weight: 500 !important;
+  font-size: 0.9rem;
+}
+
+.about-footer-email {
+  font-weight: 500 !important;
+  font-size: 0.9rem;
+}
+
+.about-us-address {
+  font-weight: 500 !important;
+  font-size: 0.9rem;
+}
+
 /* dark theme styles */
 
 /* body bg: #background: #1a1b1d; */
@@ -777,5 +805,17 @@ button[data-bs-target="#carouselExampleIndicators"] {
 }
 
 .why-us-txt--dark {
+  color: #dfdfdf;
+}
+
+.about-footer-description--dark {
+  color: #dfdfdf;
+}
+
+.about-footer-email--dark {
+  color: #dfdfdf;
+}
+
+.about-us-address--dark {
   color: #dfdfdf;
 }

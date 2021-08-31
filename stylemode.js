@@ -41,6 +41,11 @@ function displayToggleStyles() {
   );
   const whyUsHeading = document.querySelector(".why-us-heading");
   const whyUsText = document.querySelectorAll(".why-us-txt");
+  const aboutFooterDescription = document.querySelector(
+    ".about-footer-description"
+  );
+  const aboutFooterEmail = document.querySelector(".about-footer-email");
+  const aboutFooterAddress = document.querySelector(".about-us-address");
 
   //   Toggle variables
   const slider = document.querySelector(".slider");
@@ -66,6 +71,9 @@ function displayToggleStyles() {
       recentProjectTitle.classList.add("project-text-title--dark");
       recentProjectDescription.classList.add("project-text-description--dark");
       whyUsHeading.classList.add("why-us-heading--dark");
+      aboutFooterDescription.classList.add("about-footer-description--dark");
+      aboutFooterEmail.classList.add("about-footer-email--dark");
+      aboutFooterAddress.classList.add("about-us-address--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -102,6 +110,9 @@ function displayToggleStyles() {
         "project-text-description--dark"
       );
       whyUsHeading.classList.remove("why-us-heading--dark");
+      aboutFooterDescription.classList.remove("about-footer-description--dark");
+      aboutFooterEmail.classList.remove("about-footer-email--dark");
+      aboutFooterAddress.classList.remove("about-us-address--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
