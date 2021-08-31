@@ -167,3 +167,71 @@ function testimonialsAnimations() {
     );
   });
 }
+
+// Why Us Animations
+
+function whyUsAnimations() {
+  const whyUsContent = document.querySelector("#why-us");
+
+  gsap.fromTo(
+    whyUsContent,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      delay: 0.6,
+      duration: 1.3,
+    }
+  );
+}
+
+// Contact Form Animations (1)
+
+function homeContactAnimations() {
+  const contactHeading = document.querySelector(".contact-heading");
+  const contactDescription = document.querySelector(".contact-description");
+  const contactForm = document.querySelector("#contact-form");
+
+  gsap.fromTo(
+    contactHeading,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      right: 0,
+      ease: "power2.out",
+      delay: 0.6,
+      duration: 1.3,
+    }
+  );
+
+  gsap.fromTo(
+    contactDescription,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      right: 0,
+      ease: "power2.out",
+      delay: 0.6,
+      duration: 1.3,
+    }
+  );
+
+  gsap.fromTo(
+    contactForm,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      left: 0,
+      ease: "power2.out",
+      delay: 0.6,
+      duration: 1.3,
+    }
+  );
+}

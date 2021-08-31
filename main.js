@@ -61,6 +61,8 @@ const learnMoreSection = document.querySelector("#learn-more-section");
 const nav = document.querySelector(".navbar");
 const currentProjects = document.querySelector("#current-projects");
 const testimonialSection = document.querySelector("#testimonials");
+const whyUsSection = document.querySelector("#why-us");
+const contactSection = document.querySelector("#contact");
 
 // Stats variables
 const statsSection = document.querySelector("#stats-section");
@@ -113,6 +115,14 @@ function displayStats() {
 
       if (section.target.id === testimonialSection.id) {
         testimonialsAnimations();
+      }
+
+      if (section.target.id === whyUsSection.id) {
+        whyUsAnimations();
+      }
+
+      if (section.target.id === contactSection.id) {
+        homeContactAnimations();
       }
     });
   });
