@@ -33,7 +33,7 @@ function collapseMenuIntoHamburgerBar() {
   const menuLinkThree = document.createElement("a");
   menuLinkThree.className = "nav-link";
   menuLinkThree.textContent = "Reviews";
-  menuLinkThree.setAttribute("href", "#reviews");
+  menuLinkThree.setAttribute("href", "#testimonials");
   menuItemThree.classList.add("lg-screen-hidden");
   menuItemThree.appendChild(menuLinkThree);
   hamburgerNav.appendChild(menuItemThree);
@@ -259,3 +259,31 @@ function cycleThroughTestimonials() {
 }
 
 cycleThroughTestimonials();
+
+// Generated Page After Form Submission (Index Contact Form)
+
+function showSubmittedFormMessage() {
+  const contactForm = document.querySelector("#contact-form");
+  const contactContainer = document.querySelector(".contact-container");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const contactFormName = document.querySelector(".contact-name");
+    const contactFormEmail = document.querySelector(".contact-email");
+    localStorage.setItem("name", contactFormName.value);
+    localStorage.setItem("email", contactFormEmail.value);
+    const customerName = localStorage.getItem("name");
+    const customerEmail = localStorage.getItem("email");
+
+    contactContainer.innerHTML = `
+    <div class="container submitted-message-container d-flex flex-column align-items-center justify-content-center">
+    <h2 class="submitted-message-header text-center mt-5 mb-2">Thank you for reaching out, <span class="submitted-name">${customerName}</span>!</h2>
+    <p class="submitted-message-description text-center mb-5">We sent an email to <span class = "submitted-email">${customerEmail}</span>. Make sure to check all available inboxes to see if you gout it! If you did not receive an email, we will be following up by phone.</p>
+    </div>
+    `;
+    console.log(customerName);
+  });
+}
+
+showSubmittedFormMessage();

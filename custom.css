@@ -3,6 +3,11 @@
 * {
   font-family: "Roboto", sans-serif !important;
 }
+
+html,
+body {
+  overflow-x: hidden !important;
+}
 body {
   line-height: 1.7 !important;
 }
@@ -283,6 +288,18 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
   .gallery-sort {
     margin-bottom: 2rem;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+
+  .gallery-header {
+    font-size: 2.3rem !important;
+  }
+}
+
+@media (max-width: 528px) {
+  .gallery-header {
+    font-size: 2.3rem !important;
   }
 }
 
@@ -670,6 +687,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
 #contact {
   margin-top: 6rem !important;
   background: #3a71fe;
+  width: 100% !important;
 }
 
 .contact-heading {
@@ -710,6 +728,31 @@ button[data-bs-target="#carouselExampleIndicators"] {
   border-radius: 0.5rem;
 }
 
+.submitted-message-header {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.submitted-message-container {
+  width: 100%;
+}
+
+.submitted-name {
+  color: black;
+}
+
+.submitted-email {
+  color: white;
+}
+
+.submitted-message-description {
+  color: rgba(0, 0, 0, 0.55);
+}
+
 /* Footer section */
 
 .email-highlight {
@@ -736,6 +779,20 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .about-us-address {
   font-weight: 500 !important;
   font-size: 0.9rem;
+}
+
+/* Footer (Job Gallery Section) */
+
+#footer-section2 {
+  background: #3a71fe;
+}
+
+#footer-section2 .about-us-heading {
+  color: white;
+}
+
+#footer-section2 .email-highlight {
+  color: white;
 }
 
 /* -------------------------------- */
@@ -781,6 +838,7 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .gallery-title {
   margin-top: 5rem !important;
+  color: black;
 }
 
 .gallery-text {
@@ -936,4 +994,12 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .about-us-address--dark {
   color: #dfdfdf;
+}
+
+.gallery-title--dark {
+  color: #3a71fe !important;
+}
+
+.gallery-description--dark {
+  color: #dfdfdf !important;
 }

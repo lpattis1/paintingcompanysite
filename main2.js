@@ -25,27 +25,41 @@ function collapseMenuIntoHamburgerBar2() {
   menuItemTwo.appendChild(menuLinkTwo);
   hamburgerNav.appendChild(menuItemTwo);
 
-  //   Item three:
-  const menuItemThree = document.createElement("li");
-  menuItemThree.className = "nav-item added-nav-item";
-  const menuLinkThree = document.createElement("a");
-  menuLinkThree.className = "nav-link";
-  menuLinkThree.textContent = "Reviews";
-  menuLinkThree.setAttribute("href", "#reviews");
-  menuItemThree.classList.add("lg-screen-hidden");
-  menuItemThree.appendChild(menuLinkThree);
-  hamburgerNav.appendChild(menuItemThree);
-
   //   Item four:
   const menuItemFour = document.createElement("li");
   menuItemFour.className = "nav-item added-nav-item";
   const menuLinkFour = document.createElement("a");
   menuLinkFour.className = "nav-link";
   menuLinkFour.textContent = "Free Estimate";
-  menuLinkFour.setAttribute("href", "#reviews");
+  menuLinkFour.setAttribute("href", "#testimonials");
   menuItemFour.classList.add("lg-screen-hidden");
   menuItemFour.appendChild(menuLinkFour);
   hamburgerNav.appendChild(menuItemFour);
 }
 
 collapseMenuIntoHamburgerBar2();
+
+// Allow the light/dark mode to work on the job gallery page
+
+function toggleModeGallery() {
+  const togglerDark = document.querySelector(".toggler-dark");
+  const togglerLight = document.querySelector(".toggler-light");
+  const galleryDescription = document.querySelector(".gallery-description");
+  const galleryTitle = document.querySelector(".gallery-title");
+
+  togglerDark.addEventListener("click", function (e) {
+    if (togglerDark.checked) {
+      galleryDescription.classList.add("gallery-description--dark");
+      galleryTitle.classList.add("gallery-title--dark");
+    }
+  });
+
+  togglerLight.addEventListener("click", function (e) {
+    if (togglerLight.checked) {
+      galleryDescription.classList.remove("gallery-description--dark");
+      galleryTitle.classList.remove("gallery-title--dark");
+    }
+  });
+}
+
+toggleModeGallery();

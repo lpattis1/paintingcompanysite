@@ -46,6 +46,8 @@ function displayToggleStyles() {
   );
   const aboutFooterEmail = document.querySelector(".about-footer-email");
   const aboutFooterAddress = document.querySelector(".about-us-address");
+  const galleryDescription = document.querySelector(".gallery-description");
+  const galleryTitle = document.querySelector(".gallery-title");
 
   //   Toggle variables
   const slider = document.querySelector(".slider");
@@ -113,6 +115,7 @@ function displayToggleStyles() {
       aboutFooterDescription.classList.remove("about-footer-description--dark");
       aboutFooterEmail.classList.remove("about-footer-email--dark");
       aboutFooterAddress.classList.remove("about-us-address--dark");
+      galleryTitle.classList.remove("gallery-title--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
