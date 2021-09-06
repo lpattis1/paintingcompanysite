@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="custom.css" />
+    <title>Morisset Painting Company | Galveston Painting Services</title>
+  </head>
+  <body>
+    <!-- top bar - toggle light or dark mode -->
+    <div class="top-bar sticky-top">
+      <div class="container d-flex justify-content-end align-items-center p-2">
+        <div class="toggle-theme-mode">
+          <input type="radio" class="toggler-light" name="mode" />
+          <span class="slider"></span>
+          <input type="radio" class="toggler-dark" name="mode" />
+        </div>
+        <label for="checkbox" class="toggler-txt">Switch to dark mode</label>
+      </div>
+    </div>
+    <!-- navbar start -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light p-4">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a class="navbar-brand" href="#"
+          ><img src="/img/logo.jpeg" alt="" class="logo" />
+          <span class="logo-txt"
+            >morisset <span class="full-logo-txt">painting</span></span
+          >
+        </a>
+        <div class="divider d-none d-lg-block"></div>
+        <div class="dropdown">
+          <button
+            class="btn dropdown-toggle drop-btn d-none d-sm-block"
+            type="button"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Learn More
+          </button>
+
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li>
+              <a class="dropdown-item drop" href="jobphotos.html">Job Photos</a>
+            </li>
+            <li>
+              <a class="dropdown-item drop" href="#about">About Us</a>
+            </li>
+            <li>
+              <a class="dropdown-item drop" href="#testimonials">Reviews</a>
+            </li>
+            <li>
+              <a class="dropdown-item drop" href="#estimate">Free Estimate</a>
+            </li>
+          </ul>
+        </div>
+
+        <button
+          class="navbar-toggler navbar-toggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon hamburger-icon"></span>
+        </button>
+
+        <div
+          class="
+            collapse
+            navbar-collapse
+            justify-content-end
+            right-menu
+            text-center
+          "
+          id="navbarNav"
+        >
+          <ul class="navbar-nav justify-content-end top-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="
+                  nav-link
+                  btn btn-bg
+                  contact-btn
+                  text-white
+                  d-none d-lg-block
+                "
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link d-lg-none d-md-block" href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar end -->
+
+    <section
+      id="services-header"
+      class="page-section mt-3 d-flex justify-content-center align-items-center"
+    >
+      <div
+        class="
+          container
+          services-header-container
+          d-flex
+          justify-content-center
+          align-items-center
+        "
+      >
+        <h1 class="services-header-title">Our Services</h1>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container services-container">
+        <h2 class="services-title text-center mt-5">
+          Our Painting and Home Improvement Services
+        </h2>
+        <p class="services-description text-center mt-3">
+          At Morisset Painting Company, superior products and services are at
+          the forefront of every job. Our experienced painters are regularly
+          trained on new products and new techniques.
+        </p>
+
+        <div class="row services-row">
+          <div class="col col-lg-4 col-12 services-col">
+            <img
+              src="/img/gallery14.jpeg"
+              alt=""
+              class="exterior-services-img img-fluid"
+            />
+            <div class="card exterior-services">
+              <div class="card-body exterior-card">
+                <h3 class="card-title exterior-card-title">Hey</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer-section" class="page-section mt-5 mb-3">
+      <div class="container footer-container">
+        <div
+          class="
+            row
+            footer-row
+            d-flex
+            justify-content-center
+            align-items-center
+            text-center
+          "
+        >
+          <div class="footer-col about-footer col-12 col-lg-6 mt-4">
+            <h2 class="about-us-heading mb-3">Morisset Painting Company</h2>
+            <p class="about-footer-description">
+              The Morisset Painting Company in Galveston is a full-service
+              painting company. We are proud to offer superior customer service
+              and professional workmanship to homes and businesses throughout
+              Galveston, TX.
+            </p>
+            <p class="about-footer-email">
+              Email Address:
+              <span class="email-highlight"
+                >Morrisetpaintingcompany@gmail.com</span
+              >
+            </p>
+            <p class="about-us-address">201 Seawall Blvd Galveston, TX 77550</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="/animations.js"></script>
+    <script type="text/javascript" src="vanillatilt.js"></script>
+    <script src="/stylemode.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>

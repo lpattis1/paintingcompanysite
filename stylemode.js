@@ -111,11 +111,6 @@ function displayToggleStyles() {
       recentProjectDescription.classList.remove(
         "project-text-description--dark"
       );
-      whyUsHeading.classList.remove("why-us-heading--dark");
-      aboutFooterDescription.classList.remove("about-footer-description--dark");
-      aboutFooterEmail.classList.remove("about-footer-email--dark");
-      aboutFooterAddress.classList.remove("about-us-address--dark");
-      galleryTitle.classList.remove("gallery-title--dark");
 
       //   multiple elements
       statTitles.forEach((title) => {
@@ -129,6 +124,12 @@ function displayToggleStyles() {
       whyUsText.forEach((text) => {
         text.classList.remove("why-us-txt--dark");
       });
+
+      whyUsHeading.classList.remove("why-us-heading--dark");
+      aboutFooterDescription.classList.remove("about-footer-description--dark");
+      aboutFooterEmail.classList.remove("about-footer-email--dark");
+      aboutFooterAddress.classList.remove("about-us-address--dark");
+      galleryTitle.classList.remove("gallery-title--dark");
     }
   });
 }
