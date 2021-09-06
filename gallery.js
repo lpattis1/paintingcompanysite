@@ -1,6 +1,7 @@
 // Image Gallery
 
 function sortThroughGallery() {
+  const galleryRow = document.querySelector(".gallery-row");
   const gallerySortingButtons = document.querySelectorAll(".gallery-sort");
   const galleryImages = document.querySelectorAll(".gallery-img");
 
@@ -17,6 +18,11 @@ function sortThroughGallery() {
         if (galleryButtonType === "all") {
           img.parentElement.classList.remove("hide-gallery-img");
         }
+
+        window.scrollTo({
+          top: galleryRow.getBoundingClientRect().top,
+          behavior: "smooth",
+        });
       });
     });
   });
