@@ -321,6 +321,27 @@ button[data-bs-target="#carouselExampleIndicators"] {
   }
 }
 
+@media (max-width: 1400px) {
+  .service-img {
+    height: 20rem !important;
+    width: 20rem !important;
+  }
+
+  .service-logo-box {
+    height: 2rem;
+    height: 2.7rem;
+  }
+
+  .service-slider {
+    height: 20rem !important;
+    width: 20rem !important;
+  }
+
+  .services-type {
+    font-size: 1.3rem;
+  }
+}
+
 /* dynamic slider property */
 .carousel-indicators .active {
   background-color: #3a71fe !important;

@@ -44,5 +44,32 @@ function servicesImgSlideDown() {
   });
 }
 
+function toggleModeServices() {
+  const togglerDark = document.querySelector(".toggler-dark");
+  const togglerLight = document.querySelector(".toggler-light");
+  const aboutFooterDescription = document.querySelector(
+    ".about-footer-description"
+  );
+  const aboutFooterEmail = document.querySelector(".about-footer-email");
+  const aboutFooterAddress = document.querySelector(".about-us-address");
+
+  togglerDark.addEventListener("click", function (e) {
+    if (togglerDark.checked) {
+      aboutFooterDescription.classList.add("about-footer-description--dark");
+      aboutFooterEmail.classList.add("about-footer-email--dark");
+      aboutFooterAddress.classList.add("about-us-address--dark");
+    }
+  });
+
+  togglerLight.addEventListener("click", function (e) {
+    if (togglerLight.checked) {
+      aboutFooterDescription.classList.remove("about-footer-description--dark");
+      aboutFooterEmail.classList.remove("about-footer-email--dark");
+      aboutFooterAddress.classList.remove("about-us-address--dark");
+    }
+  });
+}
+
 servicesImgSlideUp();
 servicesImgSlideDown();
+toggleModeServices();
