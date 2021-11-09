@@ -28,6 +28,8 @@ function servicesImgSlideUp() {
   });
 }
 
+// Sliding animation
+
 function servicesImgSlideDown() {
   servicesImgs.forEach((img) => {
     img.addEventListener("mouseleave", function (e) {
@@ -43,6 +45,8 @@ function servicesImgSlideDown() {
     });
   });
 }
+
+// Light/dark footer tweak
 
 function toggleModeServices() {
   const togglerDark = document.querySelector(".toggler-dark");

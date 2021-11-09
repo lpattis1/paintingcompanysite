@@ -1074,11 +1074,11 @@ button[data-bs-target="#carouselExampleIndicators"] {
 }
 
 .interior-service-logo-box {
-  background: #434547;
+  background: white;
 }
 
 .deck-service-logo-box {
-  background: #1a1b1d;
+  background: white;
 }
 
 /* Dynamic Classes */
