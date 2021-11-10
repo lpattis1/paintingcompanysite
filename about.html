@@ -23,6 +23,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="custom.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
     <title>Morisset Painting Company | Galveston Painting Services</title>
   </head>
   <body>
@@ -130,169 +136,168 @@
     <!-- navbar end -->
 
     <section
-      id="services-header"
+      id="about-header"
       class="page-section mt-3 d-flex justify-content-center align-items-center"
     >
       <div
         class="
           container
-          services-header-container
+          about-header-container
           d-flex
           justify-content-center
           align-items-center
         "
       >
-        <h1 class="services-header-title">Our Services</h1>
+        <h1 class="about-header-title">About Us</h1>
       </div>
     </section>
 
-    <section id="services">
-      <div class="container services-container">
-        <h2 class="services-title text-center mt-5">
-          Painting and Home Improvement Services
-        </h2>
-        <p class="services-description text-center mt-3 mb-5">
-          At Morisset Painting Company, superior products and services are at
-          the forefront of every job. Our experienced painters are regularly
-          trained on new products and new techniques.
-        </p>
-
-        <div class="row services-row m-auto">
-          <div class="col col-lg-4 col-12 services-col">
-            <h2 class="service-rank exterior-service text-center">1</h2>
-
-            <div
-              class="
-                exterior-services-img
-                service-img
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-              data-imgnum="1"
-            >
-              <div class="exterior-services-slider service-slider"></div>
-
-              <div class="exterior-btn-holder service-btn-holder">
-                <button class="btn exterior-btn service-btn">
-                  <a href="jobphotos.html" class="learn-more-link"
-                    >Learn More</a
-                  >
-                </button>
+    <section id="about">
+      <div id="#mission" class="our-mission about-section">
+        <div
+          class="
+            container
+            about-container
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div
+            class="
+              mission-container
+              row
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="mission-text-area mb-5">
+                <h2 class="mission-title">Our Mission</h2>
+                <p class="mission-description">
+                  To perform for our customers the highest level of quality
+                  painting, siding, and gutter services. To ensure the longevity
+                  of our company through repeat and referral business achieved
+                  by customer satisfaction in all areas including: comprehensive
+                  knowledge of work to be performed, attention to detail, and
+                  service-minded attitudes. To maintain the highest levels of
+                  professionalism, integrity and honesty in our relationships
+                  with suppliers and customers.
+                </p>
               </div>
             </div>
-            <div
-              class="
-                exterior-services-text
-                services-text
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-            >
-              <div class="service-logo-box exterior-service-logo-box">
+
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="mission-img-area mt-2">
                 <img
-                  src="/img/exterior-gallery.jpeg"
+                  src="https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   alt=""
-                  class="service-logo"
+                  class="mission-img img-fluid"
                 />
               </div>
-              <h3 class="exterior-services-title services-type">
-                <a href="jobphotos.html">Exterior</a>
-              </h3>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="col col-lg-4 col-12 services-col">
-            <h2 class="service-rank interior-service text-center">2</h2>
-
-            <div
-              class="
-                interior-services-img
-                service-img
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-              data-imgnum="2"
-            >
-              <div class="interior-services-slider service-slider"></div>
-
-              <div class="interior-btn-holder service-btn-holder">
-                <button class="btn interior-btn service-btn">
-                  <a href="jobphotos.html" class="learn-more-link"
-                    >Learn More</a
-                  >
-                </button>
+      <div id="#history" class="our-history about-section">
+        <div
+          class="
+            container
+            about-container
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div
+            class="
+              history-container
+              row
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="history-img-area">
+                <img
+                  src="https://images.pexels.com/photos/1370704/pexels-photo-1370704.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                  alt=""
+                  class="history-img img-fluid"
+                />
               </div>
             </div>
 
-            <div
-              class="
-                interior-services-text
-                services-text
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-            >
-              <div class="service-logo-box interior-service-logo-box">
-                <img
-                  src="/img/interior-gallery.jpeg"
-                  alt=""
-                  class="service-logo"
-                />
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="history-text-area mb-5">
+                <h2 class="history-title">
+                  Our <span class="emphasis-text">History</span>
+                </h2>
+                <p class="history-description">
+                  Founded by Phil Morisset in 2016, our company’s trustworthy
+                  and high reputation has derived from a long list of satisfied
+                  customers. We are very proud of our high referral rate, which
+                  has allowed us to maintain the same office location and
+                  telephone number since our establishment. Hard work and
+                  dedication are the principles that drive our stable growth.
+                </p>
               </div>
-              <h3 class="interior-services-title services-type">
-                <a href="jobphotos.html">Interior</a>
-              </h3>
             </div>
           </div>
+        </div>
+      </div>
 
-          <div class="col col-lg-4 col-12 services-col">
-            <h2 class="service-rank deck-service text-center">3</h2>
-
-            <div
-              class="
-                deck-services-img
-                service-img
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-              data-imgnum="3"
-            >
-              <div class="deck-services-slider service-slider"></div>
-
-              <div class="deck-btn-holder service-btn-holder">
-                <button class="btn deck-btn service-btn">Learn More</button>
+      <div id="#what-we-do" class="our-performance about-section">
+        <div
+          class="
+            container
+            what-we-do-container
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div
+            class="
+              we-do-container
+              row
+              d-flex
+              align-items-center
+              justify-content-center
+            "
+          >
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="what-we-do-text-area mb-5">
+                <h2 class="what-we-do-title">What We Do</h2>
+                <p class="what-we-do-description">
+                  We are a fully insured and licensed painting company with the
+                  staff and materials to complete any painting project of any
+                  size. Our professional painting staff must go through a
+                  rigorous quality check to ensure that you get only the safest
+                  and highest quality services.
+                </p>
               </div>
             </div>
 
-            <div
-              class="
-                deck-services-text
-                services-text
-                d-flex
-                align-items-center
-                justify-content-center
-              "
-            >
-              <div class="service-logo-box deck-service-logo-box">
+            <div class="col-12 col-lg-6 mission-col">
+              <div class="what-we-do-img-area mt-2">
                 <img
-                  src="/img/porch-gallery.jpeg"
+                  src="https://images.pexels.com/photos/164558/pexels-photo-164558.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
                   alt=""
-                  class="service-logo"
+                  class="what-we-do-img img-fluid"
                 />
               </div>
-              <h3 class="deck-services-title services-type">
-                <a href="">Deck & Patio</a>
-              </h3>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div id="map-section" class="container map-container about-section">
+      <div id="map"></div>
+    </div>
 
     <footer id="footer-section" class="page-section mt-5 mb-3">
       <div class="container footer-container">
@@ -334,9 +339,14 @@
     ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="/animations.js"></script>
-    <script type="text/javascript" src="vanillatilt.js"></script>
     <script src="/stylemode.js"></script>
-    <script src="/services.js"></script>
-    <script src="/main.js"></script>
+
+    <script src="/about.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script src="map.js"></script>
   </body>
 </html>

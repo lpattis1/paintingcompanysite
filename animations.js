@@ -235,3 +235,120 @@ function homeContactAnimations() {
     }
   );
 }
+
+// About Us Animations
+
+function missionAnimation() {
+  const missionTxt = document.querySelector(".mission-text-area");
+  const missionImg = document.querySelector(".mission-img-area");
+
+  gsap.fromTo(
+    missionTxt,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      left: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+
+  gsap.fromTo(
+    missionImg,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      right: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+}
+
+function historyAnimation() {
+  const historyTxt = document.querySelector(".history-text-area");
+  const historyImg = document.querySelector(".history-img-area");
+
+  gsap.fromTo(
+    historyTxt,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      right: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+
+  gsap.fromTo(
+    historyImg,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      left: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+}
+
+function whatWeDoAnimation() {
+  const whatWeDoTxt = document.querySelector(".what-we-do-text-area");
+  const whatWeDoImg = document.querySelector(".what-we-do-img-area");
+
+  gsap.fromTo(
+    whatWeDoTxt,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      left: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+
+  gsap.fromTo(
+    whatWeDoImg,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      right: 0,
+      ease: "power2.out",
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+}
+
+function mapAnimation() {
+  const map = document.querySelector("#map-section");
+
+  gsap.fromTo(
+    map,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      delay: 0.3,
+      duration: 1.3,
+    }
+  );
+}

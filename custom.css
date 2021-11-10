@@ -228,6 +228,11 @@ button:focus {
   border-radius: 0.5rem;
 }
 
+.caption-btn:hover {
+  color: white;
+  background: #3468ec;
+}
+
 .caption-title {
   color: white;
   font-weight: bolder;
@@ -282,16 +287,6 @@ button[data-bs-target="#carouselExampleIndicators"] {
     flex-direction: column;
   }
 
-  .sorting-row {
-    flex-direction: column !important;
-  }
-
-  .gallery-sort {
-    margin-bottom: 2rem;
-    margin-right: 0 !important;
-    margin-left: 0 !important;
-  }
-
   .gallery-header {
     font-size: 2.3rem !important;
   }
@@ -301,6 +296,18 @@ button[data-bs-target="#carouselExampleIndicators"] {
   .gallery-header,
   .services-header-title {
     font-size: 2.3rem !important;
+  }
+}
+
+@media (max-width: 630px) {
+  .sorting-row {
+    flex-direction: column !important;
+  }
+
+  .gallery-sort {
+    margin-bottom: 2rem;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -462,6 +469,11 @@ button[data-bs-target="#carouselExampleIndicators"] {
   margin: 0 auto !important;
   background: #3a71fe;
   padding: 1rem 2.5rem;
+  color: white;
+}
+
+.work-btn:hover {
+  background: #3468ec;
   color: white;
 }
 
@@ -858,6 +870,12 @@ button[data-bs-target="#carouselExampleIndicators"] {
   cursor: pointer;
 }
 
+.gallery-sort:hover {
+  transform: translateY(-4%);
+  background-color: rgb(243, 243, 243);
+  transition: 0.3s ease-in-out;
+}
+
 .gallery-title {
   margin-top: 5rem !important;
   color: black;
@@ -871,11 +889,16 @@ button[data-bs-target="#carouselExampleIndicators"] {
 
 .all-img,
 .exterior-img,
-.interior-img {
+.interior-img,
+.deck-img {
   object-fit: cover;
   height: 2rem;
   width: 2rem;
   border-radius: 50%;
+}
+
+.sorting-row {
+  margin-bottom: 4.5rem !important;
 }
 
 /* Gallery */
@@ -1003,6 +1026,16 @@ button[data-bs-target="#carouselExampleIndicators"] {
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
 }
 
+.learn-more-link {
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
 .service-logo {
   height: 2rem;
   border-radius: 0.2rem;
@@ -1061,6 +1094,11 @@ button[data-bs-target="#carouselExampleIndicators"] {
   color: white;
 }
 
+.service-btn:hover {
+  color: white;
+  background: #3468ec;
+}
+
 .exterior-services-img {
   background-image: url(/img/exterior-gallery.jpeg);
 }
@@ -1080,6 +1118,163 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .deck-service-logo-box {
   background: white;
 }
+
+/* -------------------------------- */
+
+/* About us */
+
+#about-header {
+  margin-top: 4rem !important;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(20, 20, 24, 0.3),
+      rgba(12, 9, 11, 0.514)
+    ),
+    url("https://images.pexels.com/photos/280222/pexels-photo-280222.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  width: 100%;
+}
+
+.about-header-title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4rem;
+}
+
+.mission-title {
+  padding-top: 3rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem !important;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.mission-description {
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.our-mission {
+  background: #3a71fe;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.mission-text-area {
+  position: relative;
+  left: -4000px;
+}
+
+.mission-img-area {
+  position: relative;
+  right: -4000px;
+}
+
+.mission-img {
+  border-radius: 0.5rem;
+}
+
+.history-text-area {
+  text-align: right;
+}
+
+.history-title {
+  padding-top: 3rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+
+  margin-bottom: 1rem !important;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.history-description {
+  margin-bottom: 2rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.history-img {
+  border-radius: 0.5rem;
+}
+
+.history-text-area {
+  position: relative;
+  right: -4000px;
+}
+
+.history-img-area {
+  position: relative;
+  left: -4000px;
+}
+
+#history {
+  margin-bottom: 5rem;
+}
+
+#what-we-do {
+  margin-bottom: 5rem;
+}
+
+.what-we-do {
+  padding-top: 6rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem !important;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.what-we-do-title {
+  padding-top: 3rem !important;
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 1rem !important;
+  line-height: 1.7;
+  text-transform: uppercase;
+}
+
+.what-we-do-description {
+  margin-bottom: 2 rem;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+.our-performance {
+  background: #3a71fe;
+  padding: 3rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
+}
+
+.what-we-do-text-area {
+  position: relative;
+  left: -4000px;
+}
+
+.what-we-do-img-area {
+  position: relative;
+  right: -4000px;
+}
+
+.what-we-do-img {
+  border-radius: 0.5rem;
+}
+
+#map-section {
+  position: relative;
+}
+
+#map {
+  height: 30rem;
+}
+
+/* -------------------------------- */
 
 /* Dynamic Classes */
 
@@ -1192,5 +1387,13 @@ button[data-bs-target="#carouselExampleIndicators"] {
 }
 
 .gallery-description--dark {
+  color: #dfdfdf !important;
+}
+
+.history-title--dark {
+  color: white;
+}
+
+.history-description--dark {
   color: #dfdfdf !important;
 }
