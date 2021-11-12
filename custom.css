@@ -1411,3 +1411,11 @@ button[data-bs-target="#carouselExampleIndicators"] {
 .history-description--dark {
   color: #dfdfdf !important;
 }
+
+.map-title--dark {
+  color: white;
+}
+
+.map-description--dark {
+  color: #dfdfdf !important;
+}

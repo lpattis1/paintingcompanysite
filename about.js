@@ -42,6 +42,9 @@ function toggleModeAbout() {
   const historyTitle = document.querySelector(".history-title");
   const historyDescription = document.querySelector(".history-description");
 
+  const findUsTitle = document.querySelector(".map-title");
+  const findUsDescription = document.querySelector(".map-description");
+
   togglerDark.addEventListener("click", function (e) {
     if (togglerDark.checked) {
       aboutFooterDescription.classList.add("about-footer-description--dark");
@@ -49,6 +52,8 @@ function toggleModeAbout() {
       aboutFooterAddress.classList.add("about-us-address--dark");
       historyTitle.classList.add("history-title--dark");
       historyDescription.classList.add("history-description--dark");
+      findUsTitle.classList.add("map-title--dark");
+      findUsDescription.classList.add("map-description--dark");
     }
   });
 
@@ -59,6 +64,8 @@ function toggleModeAbout() {
       aboutFooterAddress.classList.remove("about-us-address--dark");
       historyTitle.classList.remove("history-title--dark");
       historyDescription.classList.remove("history-description--dark");
+      findUsTitle.classList.remove("map-title--dark");
+      findUsDescription.classList.remove("map-description--dark");
     }
   });
 }
