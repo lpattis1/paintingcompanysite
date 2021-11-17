@@ -21,6 +21,47 @@ function toggleLightDarkMode() {
   });
 }
 
+function toggleModeHome() {
+  const togglerDark = document.querySelector(".toggler-dark");
+  const togglerLight = document.querySelector(".toggler-light");
+
+  const statTitles = document.querySelectorAll(".stat-title");
+  const statDescriptions = document.querySelectorAll(".stat-description");
+  const whyUsOne = document.querySelector(".why-us-1");
+  const whyUsTwo = document.querySelector(".why-us-2");
+
+  togglerDark.addEventListener("click", function (e) {
+    if (togglerDark.checked) {
+      statTitles.forEach((title) => {
+        title.classList.add("stat-title--dark");
+      });
+
+      statDescriptions.forEach((desciption) => {
+        desciption.classList.add("stat-description--dark");
+      });
+
+      whyUsOne.classList.add("why-us-1--dark");
+      whyUsTwo.classList.add("why-us-2--dark");
+    }
+  });
+
+  togglerLight.addEventListener("click", function (e) {
+    if (togglerLight.checked) {
+      statTitles.forEach((title) => {
+        title.classList.remove("stat-title--dark");
+      });
+
+      statDescriptions.forEach((desciption) => {
+        desciption.classList.remove("stat-description--dark");
+      });
+
+      whyUsOne.classList.remove("why-us-1--dark");
+      whyUsTwo.classList.remove("why-us-2--dark");
+    }
+  });
+}
+toggleModeHome();
+
 // Dark mode styles function
 
 function displayToggleStyles() {
