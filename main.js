@@ -22,7 +22,7 @@ function collapseMenuIntoHamburgerBar() {
   const menuLinkTwo = document.createElement("a");
   menuLinkTwo.className = "nav-link";
   menuLinkTwo.textContent = "About Us";
-  menuLinkTwo.setAttribute("href", "#about");
+  menuLinkTwo.setAttribute("href", "about.html");
   menuItemTwo.classList.add("lg-screen-hidden");
   menuItemTwo.appendChild(menuLinkTwo);
   hamburgerNav.appendChild(menuItemTwo);
@@ -33,21 +33,10 @@ function collapseMenuIntoHamburgerBar() {
   const menuLinkThree = document.createElement("a");
   menuLinkThree.className = "nav-link";
   menuLinkThree.textContent = "Reviews";
-  menuLinkThree.setAttribute("href", "#testimonials");
+  menuLinkThree.setAttribute("href", "index.html/#testimonials");
   menuItemThree.classList.add("lg-screen-hidden");
   menuItemThree.appendChild(menuLinkThree);
   hamburgerNav.appendChild(menuItemThree);
-
-  //   Item four:
-  const menuItemFour = document.createElement("li");
-  menuItemFour.className = "nav-item added-nav-item";
-  const menuLinkFour = document.createElement("a");
-  menuLinkFour.className = "nav-link";
-  menuLinkFour.textContent = "Free Estimate";
-  menuLinkFour.setAttribute("href", "#reviews");
-  menuItemFour.classList.add("lg-screen-hidden");
-  menuItemFour.appendChild(menuLinkFour);
-  hamburgerNav.appendChild(menuItemFour);
 }
 
 collapseMenuIntoHamburgerBar();
