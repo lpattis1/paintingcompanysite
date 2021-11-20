@@ -33,7 +33,7 @@ function collapseMenuIntoHamburgerBar() {
   const menuLinkThree = document.createElement("a");
   menuLinkThree.className = "nav-link";
   menuLinkThree.textContent = "Reviews";
-  menuLinkThree.setAttribute("href", "index.html/#testimonials");
+  menuLinkThree.setAttribute("href", "index.html#testimonials");
   menuItemThree.classList.add("lg-screen-hidden");
   menuItemThree.appendChild(menuLinkThree);
   hamburgerNav.appendChild(menuItemThree);

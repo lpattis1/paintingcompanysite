@@ -92,21 +92,10 @@ function collapseMenuIntoHamburgerBar2() {
   const menuLinkTwo = document.createElement("a");
   menuLinkTwo.className = "nav-link";
   menuLinkTwo.textContent = "About Us";
-  menuLinkTwo.setAttribute("href", "#about");
+  menuLinkTwo.setAttribute("href", "about.html");
   menuItemTwo.classList.add("lg-screen-hidden");
   menuItemTwo.appendChild(menuLinkTwo);
   hamburgerNav.appendChild(menuItemTwo);
-
-  //   Item four:
-  const menuItemFour = document.createElement("li");
-  menuItemFour.className = "nav-item added-nav-item";
-  const menuLinkFour = document.createElement("a");
-  menuLinkFour.className = "nav-link";
-  menuLinkFour.textContent = "Free Estimate";
-  menuLinkFour.setAttribute("href", "#testimonials");
-  menuItemFour.classList.add("lg-screen-hidden");
-  menuItemFour.appendChild(menuLinkFour);
-  hamburgerNav.appendChild(menuItemFour);
 }
 
 collapseMenuIntoHamburgerBar2();
